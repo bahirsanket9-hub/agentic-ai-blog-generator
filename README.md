@@ -1,11 +1,8 @@
-# agentic-ai-blog-generator
-An end-to-end AI blog generation system built with FastAPI, LangGraph, and modern LLM tooling to demonstrate agentic AI workflows, backend API design, and production-ready deployment.
-
 # 🚀 Agentic AI Blog Generator
 
-An AI-powered blog generation platform built with **FastAPI** and **LangGraph** that automates content creation using agentic workflows and Large Language Models (LLMs).
+An AI-powered blog generation backend built with **FastAPI** and **LangGraph** that automates blog creation using agentic workflows and Large Language Models (LLMs).
 
-This project demonstrates how to build **production-ready GenAI backends** with structured AI pipelines, API design, and modern deployment practices.
+This project demonstrates how to design **modular, production-ready GenAI systems** with clean architecture, scalable AI pipelines, and modern deployment practices.
 
 ---
 
@@ -13,13 +10,14 @@ This project demonstrates how to build **production-ready GenAI backends** with 
 
 - 🧠 Agentic AI workflow using **LangGraph**
 - ⚡ High-performance API built with **FastAPI**
-- ✍️ Automated blog:
-  - Title generation  
-  - Content creation  
-  - Structured responses
-- 🔐 Secure API key handling using environment variables
-- 📦 Ready for deployment on **Railway / Render / Fly.io**
-- 📑 Auto API docs with **Swagger UI**
+- ✍️ Automated blog generation:
+  - Title creation
+  - Content generation
+- 🧩 Clean modular architecture:
+  - graphs / nodes / states / llms
+- 🔐 Secure environment variable handling
+- 📑 Interactive API docs with **Swagger UI**
+- ☁️ Ready for deployment on **Railway, Render, Fly.io**
 
 ---
 
@@ -30,8 +28,64 @@ This project demonstrates how to build **production-ready GenAI backends** with 
 - **LLM Integration:** LangChain + OpenAI  
 - **Server:** Uvicorn  
 - **Config:** python-dotenv  
-- **Deployment:** Railway  
+- **Deployment:** Railway / Render  
+
+---
+
+## 📁 Project Structure
+
+├── app.py
+├── requirements.txt
+├── .env
+├── .gitignore
+├── README.md
+│
+└── src/
+├── init.py
+├── graphs/
+│ ├── init.py
+│ └── graph_builder.py
+│
+├── llms/
+│ ├── init.py
+│ └── openaillm.py
+│
+├── nodes/
+│ ├── init.py
+│ └── blog_node.py
+│
+└── states/
+├── init.py
+└── blogstate.py
 
 
+---
+
+# 🛠️ Local Setup Guide
+
+Follow these steps to run the project on your system.
+
+---
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+Create .env file
+OPENAI_API_KEY=your_api_key_here
+
+Run the application
+uvicorn app:app --reload
+
+Open API documentation:
+http://127.0.0.1:8000/docs
 
 

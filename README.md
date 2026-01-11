@@ -70,8 +70,8 @@ Follow these steps to run the project on your system.
 ## 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/bahirsanket9-hub/agentic-ai-blog-generator.git
+cd ai-blog-generator
 
 python -m venv venv
 
